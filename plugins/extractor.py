@@ -11,6 +11,10 @@ from config import Config
 from script import Script
 
 
+
+from helpers.chat_base import TRChatBase
+
+
 @trojanz.on_message(filters.private & (filters.document | filters.video))
 async def confirm_dwnld(client, message):
 
