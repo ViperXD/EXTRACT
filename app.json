@@ -6,9 +6,9 @@
         "Streams",
         "Extractor",
         "Telegram Bot",
-        "TroJanzHEX"
+        "VKPROJECTS"
     ],
-    "website": "https://TroJanzHEX.me",
+    "website": "https://t.me/VKPROJECTS",
     "repository": "https://github.com/TroJanzHEX/Streams-Extractor",
     "success_url": "https://telegram.dog/TroJanzHEX",
     "env": {
@@ -23,6 +23,11 @@
         "APP_ID": {
             "description": "Your APP ID from my.telegram.org or @UseTGXBot",
             "value": ""
+        },   
+        "UPDATE_CHANNEL": {
+        "description": "For Force Subscribe. Paste your Update channel USERNAME (without @)..",
+        "value": "",
+        "required": false
         },
         "AUTH_USERS": {
             "description": "Id of users that can use the bot, from @MissRose_bot by /id command",
