@@ -11,7 +11,7 @@ from config import Config
 from script import Script
 
 
-from helper_funcs.chat_base import TRChatBase
+from helpers.chat_base import TRChatBase
 
 
 @trojanz.on_message(filters.command(["start"]) & filters.private)
