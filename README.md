@@ -34,11 +34,11 @@
 ## Installation
 
 ### Deploy to Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TroJanzHEX/Streams-Extractor)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy/)
 
 ### Deploy in your vps
 ```sh
-git clone https://github.com/TroJanzHEX/Streams-Extractor
+git clone https://github.com/v-v-r-official/EXTRACT
 cd Streams-Extractor
 pip3 install -r requirements.txt
 # <Create config.py appropriately>
@@ -57,6 +57,6 @@ python3 main.py
 
 ## Credits
 
-[![TroJanz](https://img.shields.io/badge/Pyrogram%20-%23F37626.svg?&style=for-the-badge&logo=telegram&logoColor=white)](https://github.com/pyrogram/pyrogram)
+[![VKPROJECTS](https://img.shields.io/badge/Pyrogram%20-%23F37626.svg?&style=for-the-badge&logo=telegram&logoColor=white)](https://github.com/pyrogram/pyrogram)
 
 
