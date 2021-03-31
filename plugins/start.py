@@ -33,23 +33,30 @@ async def start(client, message):
 
 
 @trojanz.on_message(filters.command(["help"]) & filters.private)
-async def help(client, message):
-    await message.reply_text(
-        text=Script.HELP_MSG,
-        disable_web_page_preview=True,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton("BACK", callback_data="start_data"),
-                    InlineKeyboardButton("ABOUT", callback_data="about_data"),
-                ],
-                [
-                    InlineKeyboardButton(
-                        "⭕️ SUPPORT ⭕️", url="https://t.me/VKP_BOTS")
-                ]
-            ]
-        ),
-        reply_to_message_id=message.message_id
+async def help_user(bot, update):
+    # logger.info(update)
+    TRChatBase(update.from_user.id, update.text, "/help")
+    update_channel = Config.UPDATE_CHANNEL
+    if update_channel:
+        try:
+            user = await bot.get_chat_member(update_channel, update.chat.id)
+            if user.status == "kicked":
+               await update.reply_text(" Sorry, You are **B A N N E D**")
+               return
+        except UserNotParticipant:
+            #await update.reply_text(f"Join @{update_channel} To Use Me")
+            await update.reply_text(
+                text="**Please Join My Update Channel Before Using Me..**",
+                reply_markup=InlineKeyboardMarkup([
+                    [ InlineKeyboardButton(text="Join My Updates Channel", url=f"https://t.me/{update_channel}")]
+              ])
+            )
+            return
+        else:
+            await bot.send_message(
+        chat_id=update.chat.id,
+        text=Translation.HELP_USER,
+        reply_to_message_id=update.message_id
     )
 
 
