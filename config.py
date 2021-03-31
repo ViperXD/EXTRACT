@@ -10,6 +10,8 @@ class Config(object):
     # Get a bot token from botfather
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
+    #FORCE SUBSCRIBE
+    UPDATE_CHANNEL = os.environ.get("UPDATE_CHANNEL", "")
 
     # Get from my.telegram.org (or @UseTGXBot)
     APP_ID = int(os.environ.get("APP_ID", ""))
